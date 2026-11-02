@@ -1,0 +1,9 @@
+Weekly product sync - 2 November 2026
+Attendees: Amaka Okonkwo, Chinedu Adeyemi, Fatima Bello
+
+Amaka: Welcome everyone. We need to ship the billing hotfix before Friday.
+Chinedu: I will update the invoice API by Wednesday and send the PR to Amaka.
+Fatima: The support queue is up 18%. Please draft a customer note by 6 November 2026.
+Amaka: Chinedu should also add regression tests for the refund path. Due 2026-11-05.
+Fatima: I will schedule a follow-up with finance next Monday.
+Decision: We are delaying the mobile release until the hotfix is verified.

@@ -1,0 +1,40 @@
+{
+  "summary": "Notes from Weekly product sync - 2 November 2026. Participants: Amaka Okonkwo, Chinedu Adeyemi, Fatima Bello. We are delaying the mobile release until the hotfix is verified. 5 action items captured.",
+  "key_points": [
+    "The support queue is up 18%.",
+    "We are delaying the mobile release until the hotfix is verified."
+  ],
+  "action_items": [
+    {
+      "description": "Ship the billing hotfix before Friday",
+      "owner": null,
+      "due_date": "Friday"
+    },
+    {
+      "description": "Update the invoice API by Wednesday and send the PR to Amaka",
+      "owner": "Chinedu Adeyemi",
+      "due_date": "Wednesday"
+    },
+    {
+      "description": "Draft a customer note by 6 November 2026",
+      "owner": null,
+      "due_date": "6 November 2026"
+    },
+    {
+      "description": "Add regression tests for the refund path",
+      "owner": "Chinedu Adeyemi",
+      "due_date": "2026-11-05"
+    },
+    {
+      "description": "Schedule a follow-up with finance next Monday",
+      "owner": "Fatima Bello",
+      "due_date": "next Monday"
+    }
+  ],
+  "participants": [
+    "Amaka Okonkwo",
+    "Chinedu Adeyemi",
+    "Fatima Bello"
+  ],
+  "provider": "mock"
+}

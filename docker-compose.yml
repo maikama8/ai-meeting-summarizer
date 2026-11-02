@@ -1,0 +1,29 @@
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      TRANSCRIPTION_PROVIDER: ${TRANSCRIPTION_PROVIDER:-mock}
+      SUMMARIZATION_PROVIDER: ${SUMMARIZATION_PROVIDER:-mock}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      OPENAI_BASE_URL: ${OPENAI_BASE_URL:-https://api.openai.com/v1}
+      OPENAI_TRANSCRIPTION_MODEL: ${OPENAI_TRANSCRIPTION_MODEL:-whisper-1}
+      OPENAI_SUMMARY_MODEL: ${OPENAI_SUMMARY_MODEL:-gpt-4o-mini}
+      OPENAI_TIMEOUT_SECONDS: ${OPENAI_TIMEOUT_SECONDS:-60}
+      FASTER_WHISPER_MODEL: ${FASTER_WHISPER_MODEL:-base}
+      FASTER_WHISPER_DEVICE: ${FASTER_WHISPER_DEVICE:-cpu}
+      FASTER_WHISPER_COMPUTE_TYPE: ${FASTER_WHISPER_COMPUTE_TYPE:-int8}
+      MAX_UPLOAD_BYTES: ${MAX_UPLOAD_BYTES:-26214400}
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "python",
+          "-c",
+          "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health')",
+        ]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 5s
