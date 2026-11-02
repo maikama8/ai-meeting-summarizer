@@ -1,6 +1,5 @@
-fastapi
-uvicorn
-openai
-python-multipart
-whisper
-# Add more as needed
+fastapi>=0.115.0
+uvicorn[standard]>=0.32.0
+pydantic-settings>=2.6.0
+python-multipart>=0.0.12
+httpx>=0.27.0
